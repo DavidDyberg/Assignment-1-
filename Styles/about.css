@@ -34,11 +34,11 @@ body {
 }
 
 ul {
+    display: flex;
+    flex-direction:row-reverse;   
     list-style-type: none;
     margin: 0;
     padding: 20px;
-    display: flex;
-    flex-direction:row-reverse   
 }
 
 li {
