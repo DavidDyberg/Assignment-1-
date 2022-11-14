@@ -1,0 +1,153 @@
+html {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 100px;  
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    grid-column-end: 4;  
+    grid-column-start: 1;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.meny {
+    background: linear-gradient(to right,  #005476, #0083b9);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction:row-reverse   
+}
+
+li {
+    display: inline; 
+}
+
+li a {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;  
+}
+
+li a:hover {
+    background-color: #005476;
+}
+
+a {
+    color: black;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.main-content {
+    grid-column-end: 4;    
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-start: span 2;
+}
+
+.row {
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;  
+    width: 100%;
+}
+
+.profile-picture {
+    width: 50%;
+}
+
+.stick-left::after {
+    background: linear-gradient(to right, #0083b9, #005476);
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 200px;
+    width: 10px;
+}
+
+.stick-right::after {
+    background: linear-gradient(to right, #0083b9, #005476);
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 200px; 
+    width: 10px;
+}
+
+.sticks {
+    display: flex;
+    justify-content: space-between;
+    margin: -10px;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    grid-column-end: 4;
+    grid-column-start: 1;
+    margin-top: 0;
+    margin-top: auto; 
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.footer-bottom {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width:768px) {
+    .meny {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row {
+        max-width: 340px;
+    }
+
+    .stick-right::after {
+        height: 70%;
+    }
+
+    .stick-left::after {
+        height: 70%;
+    } 
+}
+
